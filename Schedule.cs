@@ -20,6 +20,8 @@ namespace Afterschool
         string task6 = "";
 
         string[] taskList = {task1, task2, task3, task4, task5, task6};
+        string[] taskList = {event1, event2};
+
 
         public Schedule()
         {
@@ -41,6 +43,11 @@ namespace Afterschool
                 if (task =! null)
                     for taskVar in taskList
                         taskVar = task;
+             string[] events = {evn1, evn2};
+            for event in events
+                if (task =! null)
+                    for eventVar in eventList
+                        eventVar = event;
         }
 
         private void Schedule_Load(object sender, EventArgs e)
@@ -53,6 +60,5 @@ namespace Afterschool
         {
             this.lblDate.Text = DateTime.Now.ToShortDateString();
         }
-
     }
 }
