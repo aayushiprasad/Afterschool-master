@@ -12,16 +12,30 @@ namespace Afterschool
 {
     public partial class Schedule : Form
     {
-        string task1 = "";
-        string task2 = "";
-        string task3 = "";
-        string task4 = "";
-        string task5 = "";
-        string task6 = "";
+        string sTask1 = string.Empty;
+        string sTask2 = string.Empty;
+        string sTask3 = string.Empty;
+        string sTask4 = string.Empty;
+        string sTask5 = string.Empty;
+        string sTask6 = string.Empty;
 
-        string[] taskList = {task1, task2, task3, task4, task5, task6};
-        string[] taskList = {event1, event2};
+        string tTask1 = string.Empty;
+        string tTask2 = string.Empty;
+        string tTask3 = string.Empty;
+        string tTask4 = string.Empty;
+        string tTask5 = string.Empty;
+        string tTask6 = string.Empty;
 
+        string sEvent1 = string.Empty;
+        string sEvent2 = string.Empty;
+
+        string tEvent1 = string.Empty;
+        string tEvent2 = string.Empty;
+
+        string[] taskList;
+        string[] taskTimeList;
+        string[] eventList;
+        string[] eventTimeList;
 
         public Schedule()
         {
@@ -38,16 +52,54 @@ namespace Afterschool
                         string evn2, string time2)
         {
             InitializeComponent();
-            string[] tasks = {tsk1, tsk2, tsk3, tsk4, tsk5, tsk6};
-            for task in tasks
-                if (task =! null)
-                    for taskVar in taskList
-                        taskVar = task;
-             string[] events = {evn1, evn2};
-            for event in events
-                if (task =! null)
-                    for eventVar in eventList
-                        eventVar = event;
+
+            taskList = new string[] { sTask1, sTask2, sTask3, sTask4, sTask5, sTask6 };
+            taskTimeList = new string[] { tTask1, tTask2, tTask3, tTask4, tTask5, tTask6 };
+            eventList = new string[] { sEvent1, sEvent2 };
+            eventTimeList = new string[] { tEvent1, tEvent2 };
+
+
+            string[] tasks = new string[] {tsk1, tsk2, tsk3, tsk4, tsk5, tsk6};
+            string[] timeReq = new string[] { timeReq1, timeReq2, timeReq3, timeReq4, timeReq5, timeReq6};
+            string[] events = new string[] { evn1, evn2 };
+            string[] timeSet = new string[] { time1, time2 };
+
+
+            foreach (var task in tasks)
+            {
+                if (task != null)
+                    for (int i = 0; i < taskList.Length; i++)
+                    {
+                        taskList[i] = task;
+                    }
+            }
+
+            foreach (var tReq in timeReq)
+            {
+                if (tReq != null)
+                    for (int i = 0; i < timeReq.Length; i++)
+                    {
+                        taskList[i] = tReq;
+                    }
+            }
+
+            foreach (var e in events)
+            { 
+                if (e != null)
+                    for (int i = 0; i < eventList.Length; i++)
+                    {
+                        eventList[i] = e;
+                    }
+            }
+
+            foreach (var tSet in timeSet)
+            {
+                if (tSet != null)
+                    for (int i = 0; i < timeSet.Length; i++)
+                    {
+                        eventList[i] = tSet;
+                    }
+            }
         }
 
         private void Schedule_Load(object sender, EventArgs e)
