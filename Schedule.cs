@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,12 +38,17 @@ namespace Afterschool
         string[] eventList;
         string[] eventTimeList;
 
+        string tStart = string.Empty;
+
+        ArrayList scheduleText = new ArrayList();
+        ArrayList scheduleTimeBlocks = new ArrayList();
+
         public Schedule()
         {
             InitializeComponent();
         }
 
-        public Schedule(string start,
+        public Schedule(string strStart,
                         string tsk1, string timeReq1, 
                         string tsk2, string timeReq2,
                         string tsk3, string timeReq3,
@@ -58,8 +64,7 @@ namespace Afterschool
             taskTimeList = new string[] { tTask1, tTask2, tTask3, tTask4, tTask5, tTask6 };
             eventList = new string[] { sEvent1, sEvent2 };
             eventTimeList = new string[] { tEvent1, tEvent2 };
-
-
+            
             string[] tasks = new string[] {tsk1, tsk2, tsk3, tsk4, tsk5, tsk6};
             string[] timeReq = new string[] { timeReq1, timeReq2, timeReq3, timeReq4, timeReq5, timeReq6};
             string[] events = new string[] { evn1, evn2 };
@@ -78,7 +83,7 @@ namespace Afterschool
             foreach (var tReq in timeReq)
             {
                 if (tReq != null)
-                    for (int i = 0; i < timeReq.Length; i++)
+                    for (int i = 0; i < taskTimeList.Length; i++)
                     {
                         taskList[i] = tReq;
                     }
@@ -96,7 +101,7 @@ namespace Afterschool
             foreach (var tSet in timeSet)
             {
                 if (tSet != null)
-                    for (int i = 0; i < timeSet.Length; i++)
+                    for (int i = 0; i < eventTimeList.Length; i++)
                     {
                         eventList[i] = tSet;
                     }
@@ -112,8 +117,15 @@ namespace Afterschool
         private void SetControls()
         {
             this.lblDate.Text = DateTime.Now.ToShortDateString();
+
+            foreach (var e in eventList)
+            {
+
+            }
+
+
+
         }
 
-        
     }
 }
