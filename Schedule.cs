@@ -39,9 +39,10 @@ namespace Afterschool
         string[] eventTimeList;
 
         string tStart = string.Empty;
+        int hrStart = 0;
+        int minStart = 0;
 
-        ArrayList scheduleText = new ArrayList();
-        ArrayList scheduleTimeBlocks = new ArrayList();
+        IDictionary<string, string> timeBlocks = new Dictionary<string, string>();
 
         public Schedule()
         {
@@ -114,14 +115,19 @@ namespace Afterschool
             this.SetControls();
         }
 
+        private void convertStringTime(string time)
+        {
+            hrStart = (int)Char.GetNumericValue(time[0]);
+            minStart = (int)Char.GetNumericValue(time[2]) + (int)Char.GetNumericValue(time[3]);
+        }
+
         private void SetControls()
         {
             this.lblDate.Text = DateTime.Now.ToShortDateString();
+            
+            timeBlocks.Add(sEvent1, tEvent1);
+            timeBlocks.Add(sEvent2, tEvent2);
 
-            foreach (var e in eventList)
-            {
-
-            }
 
 
 

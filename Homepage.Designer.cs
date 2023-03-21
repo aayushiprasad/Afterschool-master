@@ -72,7 +72,6 @@ namespace Afterschool
             this.cbTime.Name = "cbTime";
             this.cbTime.Size = new System.Drawing.Size(155, 21);
             this.cbTime.TabIndex = 4;
-            this.cbTime.SelectedIndexChanged += new System.EventHandler(this.cboTime_SelectedIndexChanged);
             this.cbTime.SelectedValueChanged += new System.EventHandler(this.SelectedTime_Changed);
             // 
             // label3

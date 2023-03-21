@@ -32,14 +32,14 @@ namespace Afterschool
             this.label3 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.task1 = new System.Windows.Forms.Panel();
-            this.chk1 = new System.Windows.Forms.CheckBox();
             this.lblTime1 = new System.Windows.Forms.Label();
+            this.chk1 = new System.Windows.Forms.CheckBox();
             this.task2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.chk2 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chk2 = new System.Windows.Forms.CheckBox();
             this.task3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.chk3 = new System.Windows.Forms.CheckBox();
@@ -94,6 +94,15 @@ namespace Afterschool
             this.task1.Size = new System.Drawing.Size(266, 55);
             this.task1.TabIndex = 4;
             // 
+            // lblTime1
+            // 
+            this.lblTime1.AutoSize = true;
+            this.lblTime1.Location = new System.Drawing.Point(178, 33);
+            this.lblTime1.Name = "lblTime1";
+            this.lblTime1.Size = new System.Drawing.Size(78, 13);
+            this.lblTime1.TabIndex = 1;
+            this.lblTime1.Text = "##:## - ##:##";
+            // 
             // chk1
             // 
             this.chk1.AutoSize = true;
@@ -105,15 +114,6 @@ namespace Afterschool
             this.chk1.Text = "Task 1";
             this.chk1.UseVisualStyleBackColor = true;
             // 
-            // lblTime1
-            // 
-            this.lblTime1.AutoSize = true;
-            this.lblTime1.Location = new System.Drawing.Point(178, 33);
-            this.lblTime1.Name = "lblTime1";
-            this.lblTime1.Size = new System.Drawing.Size(78, 13);
-            this.lblTime1.TabIndex = 1;
-            this.lblTime1.Text = "##:## - ##:##";
-            // 
             // task2
             // 
             this.task2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -124,26 +124,6 @@ namespace Afterschool
             this.task2.Name = "task2";
             this.task2.Size = new System.Drawing.Size(266, 55);
             this.task2.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(178, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "##:## - ##:##";
-            // 
-            // chk2
-            // 
-            this.chk2.AutoSize = true;
-            this.chk2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk2.Location = new System.Drawing.Point(12, 13);
-            this.chk2.Name = "chk2";
-            this.chk2.Size = new System.Drawing.Size(75, 24);
-            this.chk2.TabIndex = 0;
-            this.chk2.Text = "Task 2";
-            this.chk2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -173,6 +153,26 @@ namespace Afterschool
             this.checkBox2.TabIndex = 0;
             this.checkBox2.Text = "Task 1";
             this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(178, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "##:## - ##:##";
+            // 
+            // chk2
+            // 
+            this.chk2.AutoSize = true;
+            this.chk2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk2.Location = new System.Drawing.Point(12, 13);
+            this.chk2.Name = "chk2";
+            this.chk2.Size = new System.Drawing.Size(75, 24);
+            this.chk2.TabIndex = 0;
+            this.chk2.Text = "Task 2";
+            this.chk2.UseVisualStyleBackColor = true;
             // 
             // task3
             // 

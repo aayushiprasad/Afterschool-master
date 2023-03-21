@@ -47,7 +47,6 @@ namespace Afterschool
 
         private void OpenTaskLog()
         {
-            //RUNs a NEW application with the desired form
             Application.Run(new TaskLog(this.cbTime.SelectedValue.ToString()));
         }
 
@@ -64,9 +63,5 @@ namespace Afterschool
             bLoad = false;
         }
 
-        private void cboTime_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
