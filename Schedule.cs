@@ -42,7 +42,8 @@ namespace Afterschool
             InitializeComponent();
         }
 
-        public Schedule(string tsk1, string timeReq1, 
+        public Schedule(string start,
+                        string tsk1, string timeReq1, 
                         string tsk2, string timeReq2,
                         string tsk3, string timeReq3,
                         string tsk4, string timeReq4,
@@ -112,5 +113,7 @@ namespace Afterschool
         {
             this.lblDate.Text = DateTime.Now.ToShortDateString();
         }
+
+        
     }
 }

@@ -48,7 +48,7 @@ namespace Afterschool
         private void OpenTaskLog()
         {
             //RUNs a NEW application with the desired form
-            Application.Run(new TaskLog());
+            Application.Run(new TaskLog(this.cbTime.SelectedValue.ToString()));
         }
 
 

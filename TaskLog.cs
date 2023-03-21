@@ -16,6 +16,7 @@ namespace Afterschool
     {
         int TaskCount = 1;
         int EventCount = 1;
+        string startTime = string.Empty;
         List<string> timeRequired = new List<string>();
         List<string> timeStart = new List<string>();
         List<string> timeEnd = new List<string>();
@@ -24,6 +25,14 @@ namespace Afterschool
         public TaskLog()
         {
             InitializeComponent();
+        }
+
+        public TaskLog(string schoolEnd)
+        {
+            InitializeComponent();
+
+            startTime = schoolEnd;
+
         }
 
         private void TaskLog_Load(object sender, EventArgs e)
@@ -139,7 +148,8 @@ namespace Afterschool
 
         private void OpenSchedule()
         {
-            Application.Run(new Schedule(this.chkTaskName1.Text,
+            Application.Run(new Schedule(startTime,
+                                         this.chkTaskName1.Text,
                                          this.lblTimeRequired1.Text,
                                          this.chkTaskName2.Text,
                                          this.lblTimeRequired2.Text,
